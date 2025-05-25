@@ -1,0 +1,109 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #e0e0e0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.calculator {
+  background: #e0e0e0;
+  border-radius: 20px;
+  box-shadow:  20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+  padding: 20px;
+  width: 320px;
+  max-width: 90%;
+}
+
+.display {
+  background: #e0e0e0;
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 10px #bebebe,
+              inset -5px -5px 10px #ffffff;
+  padding: 20px;
+  text-align: right;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  min-height: 50px;
+  word-wrap: break-word;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow:  5px 5px 10px #bebebe,
+               -5px -5px 10px #ffffff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  box-shadow: inset 5px 5px 10px #bebebe,
+              inset -5px -5px 10px #ffffff;
+}
+
+.btn:active {
+  box-shadow: inset 2px 2px 5px #bebebe,
+              inset -2px -2px 5px #ffffff;
+}
+
+.btn-clear {
+  grid-column: span 2;
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.btn-delete {
+  background-color: #ffa502;
+  color: #fff;
+}
+
+.btn-operator {
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+.btn-equals {
+  grid-column: span 2;
+  background-color: #2ed573;
+  color: #fff;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 15px;
+    font-size: 1em;
+  }
+
+  .display {
+    font-size: 1.5em;
+    padding: 15px;
+  }
+}
